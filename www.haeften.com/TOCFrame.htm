@@ -1,0 +1,209 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<title>The Improvement Factory</title>
+<META  http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META  name="description" content="Ashley Van Haeften presents The Improvement Factory (TOC)">
+<META  name="keywords"    content="
+	   Ashley Van Haeften London
+	   ">
+<META  name="copyright"   content="1999-2008, Ashley Van Haeften">  	   
+<META  name="rating"      content="general">
+<META  name="contact"     content="teahot@gmail.com">
+<META  name="location"    content="United Kingdom, London">
+<META  name="author" 	  content="Ashley van Haeften">
+<META  name="distribution" content="global">
+<META  name="resource-type" content="document">
+
+<base target=MainFrame>
+<link rel=StyleSheet href="haeften.css">
+<link rel=Edit-Time-Data href="TOCFrame_files/editdata.mso">
+
+<!-- Pull in personal library scripts & styles -->
+<script language=JavaScript src="haeften.js" type="text/javascript"></script>
+
+<!-- LOCAL SYLES to override haeften.js -->
+<style>
+a:link {text-decoration:none;
+	color:#FEA /* chocolate light */
+	}
+a:visited {text-decoration:none;
+	color:#663300 /* chocolate */
+	}
+</style>
+
+<script language=JavaScript>
+function ie(n){
+if (n==1){return navigator.appName}
+if (navigator.appName == "Microsoft Internet Explorer"){
+  return true;
+  } else {
+  return false;
+  }
+}
+
+// (C) 2000 www.CodeLifter.com
+// http://www.codelifter.com
+// Free for all users, but leave in this  header
+// NS4-6,IE4-6
+// Fade effect only in IE; degrades gracefully
+
+// =======================================
+// set the following variables
+// =======================================
+
+// Duration of crossfade (seconds)
+var crossFadeDuration = 8
+
+// Set slideShowSpeed (milliseconds)
+var slideShowSpeed = (2000+crossFadeDuration*1000)
+
+// Specify the image files
+var Pic = new Array() // don't touch this
+// to add more images, just continue
+// the pattern, adding to the array below
+
+Pic[0] = '_images/head_a.gif'
+Pic[1] = '_images/head_b.gif'
+Pic[2] = '_images/head_c.gif'
+Pic[3] = '_images/head_d.gif'
+//Pic[4] = '_images/head_e.gif'
+
+
+// =======================================
+// do not edit anything below this line
+// =======================================
+
+var t
+var j = 2  // Make < p
+var oldj=0 // Make <> j
+var p = Pic.length
+
+var preLoad = new Array()
+for (i = 0; i < p; i++){
+   preLoad[i] = new Image()
+   preLoad[i].src = Pic[i]
+}
+
+function runSlideShow(){
+   if (document.all){
+      //document.images.SlideShow.style.filter="blendTrans(duration=2)"
+      document.images.SlideShow.style.filter="blendTrans(duration="+crossFadeDuration+")"
+      document.images.SlideShow.filters.blendTrans.Apply()      
+   }
+   document.images.SlideShow.src = preLoad[j].src
+   if (document.all){
+      document.images.SlideShow.filters.blendTrans.Play()
+   }
+   oldj=j
+   j = Math.round(Math.random()*(p+1))
+   if (j==oldj){j++}
+   if (j > (p-1)) j=0
+   t = setTimeout('runSlideShow()', slideShowSpeed)
+}
+
+</script>
+
+</head>
+<body text=black bgcolor=#160800 lang=EN-GB style='tab-interval:36.0pt'> <!--background="_images/blackpaper.gif"-->
+
+<h3><a href="default.htm" target="_top">Home</a></h3>
+<h3><a href="business/business.htm">Business</a></h3>
+<h3><a href="quality/quality.htm">Quality</a></h3>
+<!--<h3><a href="money/money.htm">Money</a></h3>-->
+<h3><a href="family_tree/family_tree.htm" >Family tree</a></h3>
+<h3><a href="leisure/leisure.htm">Leisure</a></h3>
+<h3><a href="projects/projects.htm">Projects</a></h3>
+<h3><a href="gadgets/gadgets.htm">Gadget diary</a></h3>
+<h3><a href="http://useroffline.blogspot.com"><i>User Offline</i> blog</a></h3>
+<h3><a href="http://sugarfree.tiddlyspot.com"><i>Sugarfree</i> wiki</a></h3>
+
+<p><font size=3 color="#450043"><span lang=EN-US
+style='font-size:12.0pt;mso-ansi-language:EN-US;mso-bidi-font-weight:bold'>
+<script language=JavaScript><!--
+// HEAD IMAGE FADER
+if (ie()){
+document.write("<table border=0 cellpadding=0 cellspacing=0><tr><td id=VU><img src='_images/head1.gif' alt='Photo' name='SlideShow' ></td></tr></table>")
+runSlideShow()
+} else { // Will not work in Netscape!
+document.write("<img border=0 width=68 height=84 src='_images/head1.gif'>")
+}
+-->
+</script>
+</span></font><span
+class=MsoHyperlink><font color="#001d73" face="Trebuchet MS"><span lang=EN-US
+style='font-family:"Trebuchet MS"'><o:p></o:p></span></font></span></p>
+
+<h3>
+<span class=MsoHyperlink><b><font size=3 color="#001d73" face="Trebuchet MS">
+<span lang=EN-US style='font-size:12.0pt;font-family:"Trebuchet MS"'>
+<script><!--
+mailto("AshleyVH","gmail.com","Ashley Van Haeften","")
+--></script>
+</span></font></b></span></h3>
+
+<a target="_blank" href="http://www.meebo.com"> <img border=0 src="_images/gomeebo-3.gif"></a><br/>
+<a href="callto://ashleyvh"><img src="_images/skypeme_btn_small_green.gif" border="0"></a><br/>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="image" src="_images/x-click-but02.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----
+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
+ng==
+-----END PKCS7-----
+">
+</form>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3594884-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+<!-- END Google Analytics -->
+</body>
+</html>

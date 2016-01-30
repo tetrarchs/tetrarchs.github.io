@@ -1,0 +1,50 @@
+06-08-2004 15:30:48.796 - File: C:\WINNT\system32\unimdm.tsp, Version 5.0.2195 - Retail 
+06-08-2004 15:30:48.984 - File: C:\WINNT\system32\unimdmat.dll, Version 5.0.2195 - Retail 
+06-08-2004 15:30:49.000 - File: C:\WINNT\system32\uniplat.dll, Version 5.0.2195 - Retail 
+06-08-2004 15:30:50.437 - File: C:\WINNT\system32\drivers\modem.sys, Version 5.0.2195 - Retail 
+06-08-2004 15:30:50.625 - File: C:\WINNT\system32\modemui.dll, Version 5.0.2195 - Retail 
+06-08-2004 15:30:50.625 - Modem type: Zoom V.92 PCI Voice Faxmodem
+06-08-2004 15:30:50.625 - Modem inf path: cxt10b4k.inf
+06-08-2004 15:30:50.625 - Modem inf section: Modem
+06-08-2004 15:30:51.375 - 115200,8,N,1, ctsfl=1, rtsctl=2
+06-08-2004 15:30:51.375 - Initializing modem.
+06-08-2004 15:30:51.375 - DSR is low while initializing the modem. Verify modem is turned on.
+06-08-2004 15:30:51.375 - Send: AT<cr>
+06-08-2004 15:30:51.390 - Recv: AT<cr>
+06-08-2004 15:30:51.390 - Command Echo
+06-08-2004 15:30:51.390 - Recv: <cr><lf>OK<cr><lf>
+06-08-2004 15:30:51.390 - Interpreted response: OK
+06-08-2004 15:30:51.406 - Send: AT&FE0V1S0=0&C1&D2+MR=2;+DR=1;+ER=1;W0<cr>
+06-08-2004 15:30:51.406 - Recv: AT&FE0V1S0=0&C1&D2+MR=2;+DR=1;+ER=1;W0<cr>
+06-08-2004 15:30:51.406 - Command Echo
+06-08-2004 15:30:51.406 - Recv: <cr><lf>OK<cr><lf>
+06-08-2004 15:30:51.406 - Interpreted response: OK
+06-08-2004 15:30:51.421 - Send: ATS7=60M1+ES=3,0,2;+DS=3;+IFC=2,2;X3<cr>
+06-08-2004 15:30:51.421 - Recv: <cr><lf>OK<cr><lf>
+06-08-2004 15:30:51.421 - Interpreted response: OK
+06-08-2004 15:30:51.437 - Send: AT+VCID=1;+FCLASS=8;<cr>
+06-08-2004 15:30:52.265 - Recv: <cr><lf>OK<cr><lf>
+06-08-2004 15:30:52.265 - Interpreted response: OK
+06-08-2004 15:30:52.390 - Waiting for a call.
+06-08-2004 15:30:52.406 - Send: at+vcid=1<cr>
+06-08-2004 15:30:53.234 - Recv: <cr><lf>OK<cr><lf>
+06-08-2004 15:30:53.234 - Interpreted response: OK
+06-08-2004 15:30:53.250 - Send: ATS0=0<cr>
+06-08-2004 15:30:53.250 - Recv: <cr><lf>OK<cr><lf>
+06-08-2004 15:30:53.250 - Interpreted response: OK
+06-08-2004 15:32:58.625 - Recv: <cr><lf>TYPE = 
+06-08-2004 15:32:58.625 - Interpreted response: MESG
+06-08-2004 15:32:58.625 - Recv: 01<cr><lf>
+06-08-2004 15:32:58.625 - Recv: DATE = 
+06-08-2004 15:32:58.625 - Interpreted response: DATE
+06-08-2004 15:32:58.625 - Recv: 0608<cr><lf>
+06-08-2004 15:32:58.625 - Recv: TIME = 
+06-08-2004 15:32:58.625 - Interpreted response: TIME
+06-08-2004 15:32:58.625 - Recv: 1532<cr><lf>
+06-08-2004 15:32:58.625 - Recv: NMBR = 
+06-08-2004 15:32:58.625 - Interpreted response: NMBR
+06-08-2004 15:32:58.625 - Recv: 07912341220<cr><lf>
+06-08-2004 15:33:00.640 - Recv: <DLE>R
+06-08-2004 15:33:00.640 - Interpreted response: Ring
+06-08-2004 15:33:03.640 - Recv: <DLE>R
+06-08-2004 15:33:03.640 - Interpreted response: Ring

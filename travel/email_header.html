@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Email subject creator</title>
+<script language="javascript"> /* Set up variables */
+var prefix=new Array ("Info","Request","Reminder","Action","Urgent","Idea", "File", "Personal", "MSG", "(blank)"),
+projects=new Array (
+"Volterra database","Change Agent","TBL","Save Money","Housekeeping","(blank)"
+),
+tolist=new Array (
+"\"Simon\" <simon@roman-empire.co.uk>",
+"\"Simon Corcoran\" <s.corcoran@ucl.ac.uk>",
+"\"Benet Salway\" <ucrarws@ucl.ac.uk>",
+"\"Eoin\" <eoincasserly@onetel.com>",
+"\"Archive\" <archive@haeften.com>",
+"\"John\" <john@bodkinprints.co.uk>",
+"(blank)"
+),
+currentTo=tolist.length-1,
+bodies= new Array(
+"Personal#\
+Hi \n\n\n\nCheers,\nAsh\n--\n\
+Ashley Van Haeften ashley@haeften.com\n\
+8 Ondine Road, London SE15 4EB\n\
+Guide to email tags: http://qurl.com/7bwtz",
+"Personal+#\
+Hi \n\n\n\nCheers,\nAsh\n--\n\
+Ashley Van Haeften ashley@haeften.com\n\
+8 Ondine Road, London SE15 4EB\n\
+tel:020.82992909 mob:079.30405920 skype:ashleyvh\n\
+Guide to email tags: http://qurl.com/7bwtz",
+"Personal-#\
+Hi \n\n\n\nCheers,\nAsh",
+"Ds#\
+ds\n\n\n\nlax\n--\n\
+Guide to email tags: http://qurl.com/7bwtz",
+
+"WM#\
+Hi \n\n\n\nCheers,\nFae\n--\n\
+Fae Fae@wikimedia.org.uk\n\
+Guide to email tags: http://j.mp/faetags",
+
+"Business#\
+Hi \n\n\n\nCheers,\nAsh\n--\nAshley Van Haeften office@haeften.com\n\
+8 Ondine Road, London SE15 4EB\n\
+tel:020.81239960 mob:079.30405920 skype:ashleyvh\n\
+Guide to email tags: http://qurl.com/7bwtz",
+"Business-#\
+Hi \n\n\n\nCheers,\nAsh\n--\nAshley Van Haeften office@haeften.com",
+
+"Formal#\
+Dear \n\n\n\nThank you,\nAshley Van Haeften\n--\n\
+Mr. Ashley Van Haeften\n8 Ondine Road, London SE15 4EB\n\
+Any text below this line has been added after this email was sent.",
+"Formal+#\
+Dear \n\n\n\nThank you,\nAshley Van Haeften\n--\n\
+Mr. Ashley Van Haeften\n8 Ondine Road, London SE15 4EB\n\
+Tel:+44.20.82992909\n\n\
+This email is private and confidential.\n\
+This is a legally recognized notice not to start or continue processing my personal data (above) \
+for the purposes of direct marketing or publication under the Data Protection Act 1988. There \
+will be no further notices. I am already registered with MPS, E-MPS and TPS and I do not need \
+to \"opt out\" of your marketing database in order to take legal action to enforce this notice\
+. Refer to \http://www.ico.gov.uk for more details.\n\
+Any text below this line has been added after this email was sent.",
+
+"Msg#\
+Emails prefixed with \"MSG:\" and suffixed with \"[EOM]\" have the entire message in the title, there is no need to open the email body.\
+ See my guide to email tags for more details: http://qurl.com/7bwtz\
+\n\nThanks,\nAsh" // Msg should stay as the last item in the array
+),
+currentBody=0;
+</script>
+</head>
+<body bgcolor="#FFFFcc" style="font-size:16px;">
+<!--Possible improvements
+ - to: list
+-->
+<table cellspacing="8px"><tr><td colspan="6">
+<h4 style="text-align:center">Ashley's email subject formating gadget</h4>
+</td></tr>
+<form name=main>
+<tr><td>
+Subject</td><td colspan="5"><label>
+<textarea name="eTitle" id="eTitle" onchange="javascript:main.Header.value=main.Header.value.replace(/(.*: )(\[.*\] )?.*?( \[EOM\])?$/,'$1$2'+main.eTitle.value+'$3');" cols=50 rows=2 style="font-size:larger;" ></textarea>
+</label>
+</td>
+
+<!--eMail type button list-->
+<tr><td valign="top" width="5" id="step_one" style="color:red">Type</td><td valign="top" width="20">
+<script language="javascript">
+  document.writeln('<select size='+prefix.length+' >');
+  for(i in prefix){
+    document.writeln('<option name="rad'+i+'" value="'+prefix[i]+'" id="rad'+i+
+	'" onclick="javascript:var p=this.value,hv=main.Header.value.replace(\' [EOM]\',\'\');\
+	if(p==\'(blank)\'){main.Header.value=hv.split(/: /)[1]} else {main.Header.value=p+\': \'+(hv.search(/: /)==-1?hv:hv.split(/: /)[1])+(p==\'MSG\'?\' [EOM]\':\'\')};\
+	if(p==\'MSG\'){currentBody=bodies.length-1};\
+	var s=getElementById(\'step_one\');s.style.color=\'black\';\
+	">'+
+	prefix[i]+'</option>');
+  }
+</script>
+</select>
+</td>
+</p>
+
+<!--Project list-->
+<label><td valign="top" width="1" id="step_two" style="color:red">Project</td><td valign="top" width="2"> 
+<script language="javascript">
+  document.writeln('<select size='+projects.length+' >');
+  for(i in projects){
+    document.writeln('<option onclick="javascript:var p=\'['+projects[i]+
+    '] \',h=main.Header,hv=h.value.replace(/\\[.*\\] / ,\'\');\
+	if(p.search(/blank/)>0){p=\'\'};\
+	if(hv.search(/:/)==-1){h.value=p+hv} else {h.value=hv.replace(/(\\w*:)\\s*/,\'$1 \'+p)};\
+	var s=getElementById(\'step_two\');s.style.color=\'black\';\
+	">'+projects[i]+'<\/option>\n');
+    }
+</script>
+</select>
+</td>
+</label>
+
+<!--To list-->
+<label><td valign="top" width="5">To</td><td valign="top" style="width:20;"> 
+<script language="javascript">
+  document.writeln('<select size='+tolist.length+' multiple="multiple" id="selTo">');
+  for(i in tolist){
+    document.writeln('<option>'+tolist[i].replace(/.<.*/,'').replace(/"/g,'')+'<\/option>\n');
+    }
+</script>
+</select>
+</td></tr>
+</label>
+
+<!--Signature button list-->
+<tr><td>Signature</td><td colspan="5">
+<script language="javascript">
+  for(var i=0;i<bodies.length;i++){
+    document.writeln('<label><input type="button" name="bod'+i+'" value="'+bodies[i].split(/#/)[0]+'" id="bod'+i+
+	'" onclick="javascript:currentBody='+i+';" \/><\/label>');
+  }
+</script>
+</td></tr>
+<tr><td></td><td colspan="5">
+<!--Preview-->
+<p>
+<input type="text" name="Header" style="background:lightyellow;border:none;" id="Header" value="" readonly="readonly" size="75" />
+</p>
+</form>
+
+<a style="width:30em;background:#86CADE;padding-left:15em;padding-right:15em;text-decoration:none;-moz-border-radius:0.5em;" id="mailto" name="mailto" href='nothing' target=_blank onmouseover="javascript:var m=getElementById('mailto'),p=getElementById('preview'),st=getElementById('selTo'),tos='';
+for(var i=0;i<st.options.length;i++){if(st.options[i].selected){tos+=tolist[i]+', '}};
+tos=tos.replace(/, $/,'');
+m.href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&source=mailto&to='+
+ escape(tos.replace(/\(blank\)/,''))+
+ '&su='+encodeURIComponent(main.Header.value)+
+ '&body='+bodies[currentBody].split('#')[1].replace(/\n/g,'%0A');
+p.innerHTML=unescape(m.href.replace(/.*\&to=/,'').replace(/%3C|</g,'%26lt;').replace(/%0A/g,'<br/>').replace(/&su=/,'<br>\n<b>').replace(/&body=/,'</b><br/>\n'));" >&middot; mailto &middot;</a>
+</tr>
+<tr><td></td><td id=preview colspan="5" ></td></tr></table>
+</body>
+</html>

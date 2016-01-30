@@ -1,0 +1,146 @@
+body {
+	 <script javascript><!-- // little fix for Netscape to work!
+	document.write("background: #160800;");
+	-->
+	</script>
+	 }
+/* See http://en.wikipedia.org/wiki/Help:User_style#Rounded_corners_in_Mozilla
+/* make a few corners round, only supported by moz/firefox/other gecko browsers for now */
+#p-cactions ul li, #p-cactions ul li a {  
+  -moz-border-radius-topleft: 1em;
+  -moz-border-radius-topright: 1em;
+}
+#content { 
+  -moz-border-radius-topleft: 1em; 
+  -moz-border-radius-bottomleft: 1em;
+}
+div.pBody {
+  -moz-border-radius-topright: 1em;
+  -moz-border-radius-bottomright: 1em;
+}
+ 
+/* same following the css3 draft specs, any browsers supporting this? */
+#p-cactions ul li, #p-cactions ul li a {  
+  border-radius-topleft: 1em;
+  border-radius-topright: 1em;
+}
+#content { 
+  border-radius-topleft: 1em;
+  border-radius-bottomleft: 1em;
+}
+div.pBody {
+  border-radius-topright: 1em;
+  border-radius-bottomright: 1em;
+}
+
+.I
+	{background=#001D73;
+	color=#DBB236;}
+
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:Arial;
+	}
+
+h1 {
+    margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:24.0pt;
+	font-family:Verdana;
+	color:#222211;
+	font-weight:normal;}
+
+h2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:18.0pt;
+	font-family:Verdana;
+	color:#332211;
+	font-weight:normal;}
+h3, .3
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;
+	color:#443300;
+	font-weight:normal;}
+h4, .4
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:MS Comic Sans, Verdana;
+	color:#005500;
+	font-weight:normal;}
+h5, .5
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:MS Comic Sans, Verdana;
+	color:#160800;
+	font-weight:bold;}
+.five
+	{font-size:10.0pt;
+	font-family:MS Comic Sans, Verdana;
+	color:#160800;
+	font-weight:normal;}
+h6, .6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:8.0pt;
+	font-family:Verdana;
+	color:#335511;
+	font-weight:normal;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:40.0pt;
+	font-family:Haettenschweiler;
+	color:black;}
+a:link, span.MsoHyperlink
+	{color:#160800;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#663300;
+	text-decoration:underline;}
+
+a:hover {
+	background: #160800;
+	color: #CC9922;
+	}
+	
+p.t, li.t, div.t
+	{
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:16.0pt;
+	font-family:Haettenschweiler;
+	color:black;}
+p.i, li.i, div.i
+	{
+	margin-right:0cm;
+	margin-left:0cm;
+	line-height:40.0pt;
+	font-size:18.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+

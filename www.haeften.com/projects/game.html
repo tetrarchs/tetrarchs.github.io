@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Flipper</title>
+
+<META  name="description" content="Simple JavaScript game.  Flip the tiles on a board.">
+<META  name="keywords"    content="JavaScript, Java Script, Game">
+<META  name="copyright"   content="2001, Ashley Van Haeften">  	   
+<META  name="rating"      content="general">
+<META  name="contact"     content="avh@london.com">
+<META  name="location"    content="United Kingdom, England, London, SE22">
+
+<link rel=stylesheet href="../haeften.css">
+<SCRIPT LANGUAGE="JavaScript" SRC="../haeften.js"></SCRIPT>
+	
+</head>
+
+
+<script language=javascript><!--
+function pos(n){
+return "ABCDEFGHKLMNPQRST".substring(n,n+1);
+}
+function boardWrite(bname,maxx,maxy){
+var cpos="";
+var line="";
+var fontSize=30;
+var cellWidth=50;
+var imageSize=80;
+var Counter=0;
+if (maxx>16){maxx=16};
+if (maxy>16){maxy=16};
+if ((maxx>7)||(maxy>5)){imageSize=40;fontSize=20;cellWidth=30};
+var CellTotal=maxx*maxy;
+line="<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN'>\n\n"+
+"<html><head></head><script language=JavaScript>"+
+"function toggle(cname,clk){"+
+"if (cname.src.indexOf('on')>1) {"+
+"  cname.src='image/off.gif';"+
+"  Counter--;"+
+"  } else {"+
+"  cname.src='image/on.gif';"+
+"  Counter++;"+
+"  }"+
+"if (clk==1){sound.src='image/click.wav'}"+
+"document.bgColor=(Counter==CellTotal)?'Gold':'#3c078d';"+
+"}"+
+"</script>"+
+"<style>\n"+
+"input,.i {font-size:"+fontSize+"pt;font-family:Courier New;font-weight:bold;text-align:center;background:gold;border:0}\n"+
+"h2,h1 {font-family:P22 AcropolisNow, Monotype Corsiva, Courier New, Times New Roman;color:gold;}\n"+
+"</style>"+	  
+"<body text=gold bgcolor='#3c078d' lang=EN-GB link=green vlink=orange>"+
+"<bgsound id=sound>"+
+"<h2 align=center>"+
+bname.toUpperCase().substring(0,1)+
+bname.toLowerCase().substring(1,99);
+if (bname=="random"){line+=" "+maxx+"x"+maxy}; 
+line+="</h2><table border=10 cellpadding=0 cellspacing=0 bgcolor=gold bordercolor=purple align=center>";
+for (var y=1; y<=maxy; y++){
+  line+="<tr height="+cellWidth+">";
+  for (var x=1; x<=maxx; x++){
+  	line+="<td width="+cellWidth+" align=center><img name="+bname+pos(y)+pos(x)+
+  	" height="+imageSize+" width="+imageSize+" src='";
+	if ((bname=="hard")||(bname=="random")){
+	  if (0.2>Math.random()) {
+	    line+="./image/on.gif";
+		Counter++;
+		} else {
+		line+="./image/off.gif";
+		}
+	  } else {
+	  if ((x==(maxx+1)/2)&&(y==(maxy+1)/2)) {
+	    line+="./image/on.gif";
+		Counter++;
+		} else {
+		line+="./image/off.gif";
+		}
+	  }
+	line+="' size=1 onClick='toggle("+bname+pos(y)+pos(x)+",1)";
+	if(y>1){
+	  line+=",toggle("+bname+pos(y-1)+pos(x)+")";
+	  if(x>1){line+=",toggle("+bname+pos(y-1)+pos(x-1)+")"};
+	  if(x<maxx){line+=",toggle("+bname+pos(y-1)+pos(x+1)+")"};
+	  }
+	if(y<maxy){
+	  line+=",toggle("+bname+pos(y+1)+pos(x)+")";
+	  if(x>1){line+=",toggle("+bname+pos(y+1)+pos(x-1)+")"};
+	  if(x<maxx){line+=",toggle("+bname+pos(y+1)+pos(x+1)+")"};
+	  }
+	if(x>1){line+=",toggle("+bname+pos(y)+pos(x-1)+")"};
+	if(x<maxx){line+=",toggle("+bname+pos(y)+pos(x+1)+")"};	
+	line+="' >";
+  	}
+  line+="</td></tr>\n";
+  }
+line+="</table><p>"+
+"<script language=javascript>"+
+"var Counter="+Counter+";"+
+"var CellTotal="+CellTotal+";"+
+"</script></body></html>";
+parent.frames.Content.document.write(line);
+parent.frames.Content.document.close();    // Otherwise new tables get "added" to the last one.
+}
+-->
+</script>
+<body text=orange bgcolor=darkblue background="../_images/paper.jpg" lang=EN-GB link=green vlink=orange
+ onLoad="boardWrite('easy',3,3)">
+<table><tr>
+<td width=200 align=center><h1>FLIPPER</h1>
+<td width=90 align=center><h2><span onClick="boardWrite('easy',3,3)">Easy</span></h2>
+<td width=90 align=center><h2><span onClick="boardWrite('medium',5,5)">Medium</span></h2>
+<td width=90 align=center><h2><span onClick="boardWrite('hard',7,7)">Hard</span></h2>
+<td width=200 align=center><h2><span onClick="boardWrite('random',Math.floor(13*Math.random()+3),
+Math.floor(7*Math.random()+3))">Random</span></h2>
+</table>
+</body>
+</html>

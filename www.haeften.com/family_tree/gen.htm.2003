@@ -1,0 +1,907 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 9">
+
+<SCRIPT LANGUAGE="JavaScript" SRC="../haeften.js"></SCRIPT>
+<link rel=stylesheet href="../haeften.css">
+
+<link rel=File-List href="./gen2_files/filelist.xml">
+<link rel=Edit-Time-Data href="./gen2_files/editdata.mso">
+<link rel=OLE-Object-Data href="./gen2_files/oledata.mso">
+<title>VAN HAEFTEN FAMILY TREE CHART</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Ashley Van Haeften</o:Author>
+  <o:LastAuthor>Ashley Van Haeften</o:LastAuthor>
+  <o:LastPrinted>1999-08-09T00:23:40Z</o:LastPrinted>
+  <o:Created>1999-08-05T17:43:09Z</o:Created>
+  <o:LastSaved>1999-08-09T00:28:00Z</o:LastSaved>
+  <o:Company>TBL</o:Company>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<style>
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+@page
+	{margin:1.0in .75in 1.0in .75in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-page-orientation:landscape;}
+tr
+	{mso-height-source:auto;}
+col
+	{mso-width-source:auto;}
+br
+	{mso-data-placement:same-cell;}
+.style0
+	{mso-number-format:General;
+	text-align:general;
+	vertical-align:bottom;
+	white-space:nowrap;
+	mso-rotate:0;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	color:windowtext;
+	font-size:10.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Arial;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border:none;
+	mso-protection:locked visible;
+	mso-style-name:Normal;
+	mso-style-id:0;}
+td
+	{mso-style-parent:style0;
+	padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:10.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Arial;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:bottom;
+	border:none;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	mso-protection:locked visible;
+	white-space:nowrap;
+	mso-rotate:0;}
+.xl24
+	{mso-style-parent:style0;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	vertical-align:top;}
+.xl25
+	{mso-style-parent:style0;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	vertical-align:top;
+	border:1.0pt solid windowtext;
+	background:white;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl26
+	{mso-style-parent:style0;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	vertical-align:top;
+	background:white;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl27
+	{mso-style-parent:style0;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	vertical-align:top;
+	border:1.0pt solid windowtext;
+	background:#FFFF99;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl28
+	{mso-style-parent:style0;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	vertical-align:top;
+	border-top:none;
+	border-right:1.0pt solid windowtext;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	background:#FFFF99;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl29
+	{mso-style-parent:style0;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	vertical-align:top;
+	border-top:none;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	background:#FFFF99;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl30
+	{mso-style-parent:style0;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	vertical-align:top;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	background:#FFFF99;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl31
+	{mso-style-parent:style0;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	vertical-align:top;
+	border-top:1.0pt solid windowtext;
+	border-right:1.0pt solid windowtext;
+	border-bottom:none;
+	border-left:1.0pt solid windowtext;
+	background:white;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl32
+	{mso-style-parent:style0;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	vertical-align:top;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	background:white;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl33
+	{mso-style-parent:style0;
+	vertical-align:top;
+	border-top:1.0pt solid windowtext;
+	border-right:1.0pt solid windowtext;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;
+	white-space:normal;}
+.xl34
+	{mso-style-parent:style0;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	vertical-align:top;
+	border-top:none;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;
+	background:#FFFF99;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl35
+	{mso-style-parent:style0;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	vertical-align:top;
+	border-top:none;
+	border-right:1.0pt solid windowtext;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;
+	background:#FFFF99;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl36
+	{mso-style-parent:style0;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	vertical-align:top;
+	border-top:1.0pt solid windowtext;
+	border-right:1.0pt solid windowtext;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;
+	background:white;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl37
+	{mso-style-parent:style0;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	vertical-align:top;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;
+	background:white;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl38
+	{mso-style-parent:style0;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	text-align:left;
+	vertical-align:top;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	background:#FFFF99;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl39
+	{mso-style-parent:style0;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	text-align:left;
+	vertical-align:top;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;
+	background:#FFFF99;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl40
+	{mso-style-parent:style0;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	text-align:left;
+	vertical-align:top;
+	border-top:1.0pt solid windowtext;
+	border-right:1.0pt solid windowtext;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;
+	background:#FFFF99;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl41
+	{mso-style-parent:style0;
+	font-weight:700;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	text-align:left;
+	vertical-align:top;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	background:#CC99FF;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl42
+	{mso-style-parent:style0;
+	font-weight:700;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	text-align:left;
+	vertical-align:top;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;
+	background:#CC99FF;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl43
+	{mso-style-parent:style0;
+	font-weight:700;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	text-align:left;
+	vertical-align:top;
+	border-top:1.0pt solid windowtext;
+	border-right:1.0pt solid windowtext;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;
+	background:#CC99FF;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl44
+	{mso-style-parent:style0;
+	color:white;
+	font-weight:700;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	text-align:left;
+	vertical-align:top;
+	background:navy;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl45
+	{mso-style-parent:style0;
+	color:white;
+	font-weight:700;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	text-align:left;
+	vertical-align:top;
+	border-top:none;
+	border-right:none;
+	border-bottom:none;
+	border-left:1.0pt solid windowtext;
+	background:navy;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl46
+	{mso-style-parent:style0;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	vertical-align:top;
+	border-top:none;
+	border-right:1.0pt solid windowtext;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	background:#FFFF99;
+	mso-pattern:auto none;
+	white-space:normal;
+	mso-text-control:shrinktofit;}
+.xl47
+	{mso-style-parent:style0;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	text-align:left;
+	vertical-align:top;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	background:white;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl48
+	{mso-style-parent:style0;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	text-align:left;
+	vertical-align:top;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;
+	background:white;
+	mso-pattern:auto none;
+	white-space:normal;}
+.xl49
+	{mso-style-parent:style0;
+	font-family:"Arial Narrow", sans-serif;
+	mso-font-charset:0;
+	text-align:left;
+	vertical-align:top;
+	border-top:1.0pt solid windowtext;
+	border-right:1.0pt solid windowtext;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;
+	background:white;
+	mso-pattern:auto none;
+	white-space:normal;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <x:ExcelWorkbook>
+  <x:ExcelWorksheets>
+   <x:ExcelWorksheet>
+    <x:Name>Sheet1</x:Name>
+    <x:WorksheetOptions>
+     <x:FitToPage/>
+     <x:Print>
+      <x:FitWidth>6</x:FitWidth>
+      <x:ValidPrinterInfo/>
+      <x:PaperSizeIndex>9</x:PaperSizeIndex>
+      <x:Scale>78</x:Scale>
+      <x:VerticalResolution>0</x:VerticalResolution>
+     </x:Print>
+     <x:PageBreakZoom>60</x:PageBreakZoom>
+     <x:Selected/>
+     <x:TopRowVisible>1</x:TopRowVisible>
+     <x:LeftColumnVisible>64</x:LeftColumnVisible>
+     <x:Panes>
+      <x:Pane>
+       <x:Number>3</x:Number>
+       <x:ActiveRow>4</x:ActiveRow>
+       <x:ActiveCol>71</x:ActiveCol>
+       <x:RangeSelection>BT5:BU5</x:RangeSelection>
+      </x:Pane>
+     </x:Panes>
+     <x:ProtectContents>False</x:ProtectContents>
+     <x:ProtectObjects>False</x:ProtectObjects>
+     <x:ProtectScenarios>False</x:ProtectScenarios>
+    </x:WorksheetOptions>
+   </x:ExcelWorksheet>
+  </x:ExcelWorksheets>
+  <x:WindowHeight>6795</x:WindowHeight>
+  <x:WindowWidth>11340</x:WindowWidth>
+  <x:WindowTopX>360</x:WindowTopX>
+  <x:WindowTopY>90</x:WindowTopY>
+  <x:ProtectStructure>False</x:ProtectStructure>
+  <x:ProtectWindows>False</x:ProtectWindows>
+ </x:ExcelWorkbook>
+</xml><![endif]-->
+</head>
+
+<body text=orange background="../_images/paper.jpg" link=blue vlink=purple class=xl24>
+<font style='font-size:36.0pt;font-weight:bold;font-family:Edwardian Script ITC, Vivaldi, Monotype Corsiva, Times New Roman;' color="orange">
+Van Haeften Family Tree
+</font>
+<p>
+<table x:str border=0 cellpadding=0 cellspacing=0 width=6975 style='border-collapse:
+ collapse;table-layout:fixed;width:5219pt'>
+ <col class=xl24 width=75 span=5 style='mso-width-source:userset;mso-width-alt:
+ 2742;width:56pt'>
+ <col class=xl24 width=145 style='mso-width-source:userset;mso-width-alt:5302;
+ width:109pt'>
+ <col class=xl24 width=75 style='mso-width-source:userset;mso-width-alt:2742;
+ width:56pt'>
+ <col class=xl24 width=145 style='mso-width-source:userset;mso-width-alt:5302;
+ width:109pt'>
+ <col class=xl24 width=75 style='mso-width-source:userset;mso-width-alt:2742;
+ width:56pt'>
+ <col class=xl24 width=145 style='mso-width-source:userset;mso-width-alt:5302;
+ width:109pt'>
+ <col class=xl24 width=75 span=2 style='mso-width-source:userset;mso-width-alt:
+ 2742;width:56pt'>
+ <col class=xl24 width=145 span=5 style='mso-width-source:userset;mso-width-alt:
+ 5302;width:109pt'>
+ <col class=xl24 width=75 span=7 style='mso-width-source:userset;mso-width-alt:
+ 2742;width:56pt'>
+ <col class=xl24 width=145 style='mso-width-source:userset;mso-width-alt:5302;
+ width:109pt'>
+ <col class=xl24 width=75 span=2 style='mso-width-source:userset;mso-width-alt:
+ 2742;width:56pt'>
+ <col class=xl24 width=145 style='mso-width-source:userset;mso-width-alt:5302;
+ width:109pt'>
+ <col class=xl24 width=75 span=7 style='mso-width-source:userset;mso-width-alt:
+ 2742;width:56pt'>
+ <col class=xl24 width=145 style='mso-width-source:userset;mso-width-alt:5302;
+ width:109pt'>
+ <col class=xl24 width=75 span=20 style='mso-width-source:userset;mso-width-alt:
+ 2742;width:56pt'>
+ <col class=xl24 width=145 style='mso-width-source:userset;mso-width-alt:5302;
+ width:109pt'>
+ <col class=xl24 width=75 span=3 style='mso-width-source:userset;mso-width-alt:
+ 2742;width:56pt'>
+ <col class=xl24 width=145 style='mso-width-source:userset;mso-width-alt:5302;
+ width:109pt'>
+ <col class=xl24 width=75 style='mso-width-source:userset;mso-width-alt:2742;
+ width:56pt'>
+ <col class=xl24 width=145 style='mso-width-source:userset;mso-width-alt:5302;
+ width:109pt'>
+ <col class=xl24 width=75 span=8 style='mso-width-source:userset;mso-width-alt:
+ 2742;width:56pt'>
+ <col class=xl24 width=145 style='mso-width-source:userset;mso-width-alt:5302;
+ width:109pt'>
+ <col class=xl24 width=75 span=7 style='mso-width-source:userset;mso-width-alt:
+ 2742;width:56pt'>
+ <tr height=28 style='mso-height-source:userset;height:21.0pt'>
+  <td colspan=80 height=28 class=xl43 width=6305 style='height:21.0pt;
+  width:4718pt' x:str="Descendant Table for Van Haeften Family ">Descendant
+  Table for Van Haeften Family </td>
+ </tr>
+ <tr height=69 style='mso-height-source:userset;height:51.95pt'>
+  <td colspan=79 height=69 class=xl44 width=6975 style='border-right:1.0pt solid black;
+  height:51.95pt;width:5219pt'>William VAN HAEFTEN b.1795<br>
+  m. Sophia PETERS</td>
+ </tr>
+ <tr height=69 style='mso-height-source:userset;height:51.95pt'>
+  <td height=69 class=xl34 width=75 style='border-right:1.0pt solid black;height:51.95pt;width:56pt'>Angelica
+  Petronella VAN HAEFTEN b.1822</td>
+  <td colspan=78 class=xl34 width=6900 style='border-right:1.0pt solid black;
+  border-left:none;width:5163pt'>George VAN HAEFTEN b.1822 d.1871<br>
+  m1. Charlotte D'SILVA<br>
+  m2. Francina PATCH<br>
+  m3. Johanna Anne Gertrude WALLACE</td>
+ </tr>
+ <tr height=69 style='mso-height-source:userset;height:51.95pt'>
+  <td height=69 class=xl24 style='height:51.95pt'></td>
+  <td class=xl28 width=75 style='width:56pt'>Jessie VAN HAEFTEN b.1846 (m1)</td>
+  <td colspan=2 class=xl34 width=150 style='border-right:1.0pt solid black;
+  border-left:none;width:112pt'>John William VAN HAEFTEN b.1847 (m1)<br>
+  m. Livinia Mary DUNCAN</td>
+  <td class=xl29 width=75 style='border-left:none;width:56pt'>Rose VAN HAEFTEN
+  b.1848 (m1)</td>
+  <td class=xl29 width=145 style='width:109pt'>Thomas Adolphus VAN HAEFTEN
+  b.1849 (m1)<br>
+  m. Geogina D'SILVA</td>
+  <td class=xl29 width=75 style='width:56pt'>Charlotte Ann VAN HAEFTEN
+  b.1851(m1)</td>
+  <td colspan=18 class=xl29 width=1910 style='border-right:1.0pt solid black;
+  width:1432pt'
+  x:str="Albert George VAN HAEFTEN b.1854 d.1919 (m2)&#10;m. Mary Stella Jane LENNON ">Albert
+  George VAN HAEFTEN b.1854 d.1919 (m2)<br>
+  m. Mary Stella Jane LENNON </td>
+  <td class=xl29 width=75 style='border-right:1.0pt solid black;border-left:none;width:56pt'>Agnes VAN HAEFTEN
+  b.1856 (m2)</td>
+  <td class=xl29 width=75 style='border-right:1.0pt solid black;width:56pt'>Ebeneza Rutheuz VAN HAEFTEN b.1856
+  (m2)</td>
+  <td colspan=6 class=xl34 width=520 style='border-right:1.0pt solid black;
+  width:389pt'>Frederick Alexander VAN HAEFTEN b.1859 d.1935 (m3)<br>
+  m. Cecilia UNKNOWN d.1920</td>
+  <td class=xl29 width=75 style='border-left:none;width:56pt'>Peter Hoekens VAN
+  HAEFTEN b.1861 (m3)</td>
+  <td class=xl29 width=75 style='width:56pt'>Mary Caroline VAN HAEFTEN b.1862
+  (m3)</td>
+  <td class=xl29 width=145 style='width:109pt'>Henry Lazarus VAN HAEFTEN b.1863
+  d.1901 (m3)<br>
+  m. Ruth Mary UNKNOWN</td>
+  <td class=xl29 width=75 style='width:56pt'>Matilda Gertrude VAN HAEFTEN
+  b.1865 (m3)</td>
+  <td class=xl29 width=75 style='border-right:1.0pt solid black;width:56pt'>Charles Francis VAN HAEFTEN b.1867
+  (m3)</td>
+  <td colspan=25 class=xl34 width=1865 style='border-right:1.0pt solid black;
+  width:1394pt'>James Michael VAN HAEFTEN b.1869 (m3)<br>
+  m. Grace Evelyn UNKNOWN</td>
+  <td colspan=9 class=xl34 width=745 style='border-right:1.0pt solid black;
+  border-left:none;width:557pt'>Samuel Edmond VAN HAEFTEN b.1870 d.1937
+  (m3)<br>
+  m. Bridget Maud UNKNOWN</td>
+  <td colspan=9 class=xl34 width=745 style='border-right:1.0pt solid black;
+  border-left:none;width:557pt'>George VAN HAEFTEN b.1872 d.1921 (m3)<br>
+  m. Maude Lilian FREEDOM</td>
+ </tr>
+ <tr height=69 style='mso-height-source:userset;height:51.95pt'>
+  <td height=69 colspan=2 class=xl24 style='height:51.95pt;mso-ignore:colspan'></td>
+  <td class=xl29 width=75 style='width:56pt'>Clarence Walther Duncan VAN
+  HAEFTEN b.1883 d.1919</td>
+  <td class=xl27 width=75 style='border-top:none;width:56pt'>Irene Guinevere
+  VAN HAEFTEN b.1886</td>
+  <td colspan=3 class=xl24 style='mso-ignore:colspan'></td>
+  <td class=xl27 width=145 style='border-top:none;width:109pt'>Mary Stella
+  Frances VAN HAEFTEN b.1881<br>
+  m. William Arthur LAFRENAIS</td>
+  <td class=xl27 width=75 style='border-top:none;border-left:none;width:56pt'
+  x:str="Maud Anna Luna VAN HAEFTEN b.1885 ">Maud Anna Luna VAN HAEFTEN b.1885 </td>
+  <td class=xl27 width=145 style='border-top:none;border-left:none;width:109pt'>Agnes
+  B VAN HAEFTEN b.1888<br>
+  m. Hugh M. LAFRENAIS</td>
+  <td class=xl27 width=75 style='border-top:none;border-left:none;width:56pt'
+  x:str="Sol Victor VAN HAEFTEN b.1891 ">Sol Victor VAN HAEFTEN b.1891 </td>
+  <td class=xl27 width=75 style='border-top:none;border-left:none;width:56pt'>Grace
+  VAN HAEFTEN b.1892</td>
+  <td colspan=7 class=xl34 width=875 style='border-right:1.0pt solid black;
+  border-left:none;width:657pt'>Joseph Valentine Pat. VAN HAEFTEN b.1896<br>
+  m. Ivy Agnes ROZE</td>
+  <td colspan=5 class=xl34 width=375 style='border-right:1.0pt solid black;
+  border-left:none;width:280pt'
+  x:str="Albert George VAN HAEFTEN b.1898&#10;m. Muriel Constance PENTONY ">Albert
+  George VAN HAEFTEN b.1898<br>
+  m. Muriel Constance PENTONY </td>
+  <td class=xl27 width=145 style='border-top:none;border-left:none;width:109pt'>Rosamond
+  Marie VAN HAEFTEN b.1900<br>
+  m. Thomas Henry MCMANUS</td>
+  <td colspan=2 class=xl24 style='mso-ignore:colspan'></td>
+  <td class=xl29 width=145 style='width:109pt'>George Andrew VAN HAEFTEN b.1880
+  d.1907<br>
+  m. Gladys Vira PALMAN</td>
+  <td class=xl27 width=75 style='border-top:none;width:56pt'>Louisa VAN HAEFTEN
+  b.1883 d.1905</td>
+  <td colspan=4 class=xl34 width=300 style='border-right:1.0pt solid black;
+  border-left:none;width:224pt'>Joseph Anthony VAN HAEFTEN b.1897<br>
+  m. Mary Clare COLKERS</td>
+  <td colspan=2 class=xl24 style='mso-ignore:colspan'></td>
+  <td class=xl27 width=145 style='border-top:none;width:109pt'>Amelia Gerlanda
+  VAN HAEFTEN b.1886</td>
+  <td colspan=2 class=xl24 style='mso-ignore:colspan'></td>
+  <td class=xl27 width=75 style='border-top:none;width:56pt'>Unknown VAN
+  HAEFTEN d. cir 1963</td>
+  <td colspan=2 class=xl30 style='border-top:none;border-right:1.0pt solid black;border-left:none'>Charles
+  James VAN HAEFTEN b.1894<br>
+  m. Nora MCDONALD</td>
+  <td colspan=15 class=xl34 width=1050 style='border-right:1.0pt solid black;
+  width:784pt'
+  x:str="Clement Alston VAN HAEFTEN b.1895 d.1972&#10;m. Alice Blanche Gertrude D'SILVA d.1964 ">Clement
+  Alston VAN HAEFTEN b.1895 d.1972<br>
+  m. Alice Blanche Gertrude D'SILVA d.1964 </td>
+  <td colspan=2 class=xl34 width=150 style='border-right:1.0pt solid black;
+  border-left:none;width:112pt'
+  x:str="Stanley Edward VAN HAEFTEN b.1897&#10;m. Amy Pearl CHAMBERS ">Stanley
+  Edward VAN HAEFTEN b.1897<br>
+  m. Amy Pearl CHAMBERS </td>
+  <td class=xl27 width=145 style='border-top:none;border-left:none;width:109pt'>Stephen
+  George VAN HAEFTEN b.1898<br>
+  m. Mary Jane MACMILLAN</td>
+  <td class=xl27 width=75 style='border-top:none;border-left:none;width:56pt'>Cecil
+  Nelson VAN HAEFTEN b.1900 d.1901</td>
+  <td colspan=2 class=xl36 width=150 style='border-right:1.0pt solid black;
+  border-left:none;width:112pt'>Edward Joseph VAN HAEFTEN b.1902<br>
+  m. Iris STCLAIRE</td>
+  <td class=xl25 width=145 style='border-top:none;border-left:none;width:109pt'>James
+  Michael VAN HAEFTEN b.1906<br>
+  m. Lillian Myrtle FEEGRADE</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Mary
+  Ethel VAN HAEFTEN b.1902</td>
+  <td class=xl25 width=145 style='border-top:none;border-left:none;width:109pt'>Winnifred
+  Anna VAN HAEFTEN b.1905<br>
+  m. Oswald Charles PETERS</td>
+  <td colspan=5 class=xl36 width=375 style='border-right:1.0pt solid black;
+  border-left:none;width:280pt'>Albert George VAN HAEFTEN b.1906<br>
+  m. Pearl Mary MEARS</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Enid
+  Louise VAN HAEFTEN b.1907</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Agnes
+  Blanche VAN HAEFTEN b.1909</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Elizabeth
+  Esme VAN HAEFTEN b.1906</td>
+  <td colspan=7 class=xl36 width=595 style='border-right:1.0pt solid black;
+  border-left:none;width:445pt'>George Anthony Douglas VAN HAEFTEN b.1910<br>
+  m. Isabella FREEMAN</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>A
+  Maud VAN HAEFTEN b.1913</td>
+ </tr>
+ <tr height=69 style='mso-height-source:userset;height:51.95pt'>
+  <td height=69 colspan=7 class=xl24 style='height:51.95pt;mso-ignore:colspan'></td>
+  <td colspan=5 class= style='mso-ignore:colspan'></td>
+  <td class=xl25 width=145 style='border-top:none;width:109pt'>Agnes Thelma VAN
+  HAEFTEN b.1922<br>
+  m. Albert Victor BOUNER</td>
+  <td class=xl25 width=145 style='border-top:none;border-left:none;width:109pt'>Monica
+  VAN HAEFTEN b.1924<br>
+  m. Samuel Joseph DOLAN</td>
+  <td class=xl25 width=145 style='border-top:none;border-left:none;width:109pt'>Elsie
+  VAN HAEFTEN b. 1924<br>
+  m. Trevor Melvin BEHAN</td>
+  <td class=xl25 width=145 style='border-top:none;border-left:none;width:109pt'>Ursula
+  VAN HAEFTEN b.1925<br>
+  m. Peter Ronald BURGESS</td>
+  <td class=xl25 width=145 style='border-top:none;border-left:none;width:109pt'>Wilhelmina
+  VAN HAEFTEN b.1927<br>
+  m. Joseph Peter STOCKS</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Julia
+  Emmeline VAN HAEFTEN b.1929</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Patricia
+  Elizabeth VAN HAEFTEN b.1931</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Ernest
+  Anthony VAN HAEFTEN b.1926</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'
+  x:str="George Alan VAN HAEFTEN b.1927 ">George Alan VAN HAEFTEN b.1927 </td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Constance
+  Teresa VAN HAEFTEN b.1930</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'
+  x:str="Noel Joseph VAN HAEFTEN b.1935 ">Noel Joseph VAN HAEFTEN b.1935 </td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Richard
+  Michael VAN HAEFTEN b.1939</td>
+  <td class=>&nbsp;</td>
+  <td colspan=2 class=xl24 style='mso-ignore:colspan'></td>
+  <td class=xl25 width=145 style='border-top:none;width:109pt'>Albert George
+  Anthony VAN HAEFTEN b.1906</td>
+  <td class=xl24></td>
+  <td class=xl25 width=75 style='border-top:none;width:56pt'>Mary VAN HAEFTEN
+  b.1912</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Albert
+  George Frederick VAN HAEFTEN b.1914</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Frederick
+  Cecil VAN HAEFTEN b.1917</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Millicent
+  Ceciia VAN HAEFTEN b.1921 d.1922</td>
+  <td colspan=5 class=xl24 style='mso-ignore:colspan'></td>
+  <td class=xl25 width=75 style='border-top:none;width:56pt'>Dennis VAN HAEFTEN</td>
+  <td colspan=2 style='border-right:1.0pt solid black'></td>
+  <td colspan=2 class=xl25 style='border-top:none;border-left:none'>Robert
+  VAN HAEFTEN<br>
+  m1. Kate UNKNOWN<br>
+  r2. Maureen Lamport</td>
+  <td colspan=2 class=xl25 width=150 style='border-right:1.0pt solid black;
+  border-left:none;width:112pt'>Clive Alston VAN HAEFTEN b.1925<br>
+  m. Joan Joyce Josephine VAN HAEFTEN</td>
+  <td colspan=3 class=xl25 width=225 style='border-right:1.0pt solid black;
+  border-left:none;width:168pt'>Germaine VAN HAEFTEN b.1931<br>
+  m. Slad SLADOVICH b. CIR 1914 d. CIR 1974</td>
+  <td colspan=3 class=xl25 width=225 style='border-right:1.0pt solid black;
+  border-left:none;width:168pt' x:str="Margaret VAN HAEFTEN&#10;m. Lesley HOPE ">Margaret
+  VAN HAEFTEN<br>
+  m. Lesley HOPE </td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'
+  x:str="Tess VAN HAEFTEN b.1926&#10;m. Joe DAVIS b. CIR 1920 ">Tess VAN
+  HAEFTEN b.1926<br>
+  m. Joe DAVIS b. CIR 1920 </td>
+  <td colspan=2 class=xl25 width=150 style='border-right:1.0pt solid black;
+  border-left:none;width:112pt'>Derek Keith Joseph VAN HAEFTEN b.1933
+  d.1990<br>
+  m1. Anne<br>
+  m2. Ruth STYLES b.1938</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'
+  x:str="Colleen VAN HAEFTEN b.1928 d.1942 ">Colleen VAN HAEFTEN b.1928 d.1942 </td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Unknown
+  VAN HAEFTEN</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>James
+  Stanley Roland VAN HAEFTEN b.1922</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Pamela
+  Pearl Catherine VAN HAEFTEN b.1926</td>
+  <td colspan=2 class= style='mso-ignore:colspan'>&nbsp;</td>
+  <td class=xl25 width=75 style='border-top:none;width:56pt'>Christopher David
+  VAN HAEFTEN b.1938</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Nigel
+  VAN HAEFTEN b.1939</td>
+  <td class=xl25 width=145 style='border-top:none;border-left:none;width:109pt'>Keith
+  Michael VAN HAEFTEN b.1939</td>
+  <td colspan=2 class=xl24 style='mso-ignore:colspan'></td>
+  <td class=xl25 width=75 style='border-top:none;width:56pt'>Dulcine Mary VAN
+  HAEFTEN b.1930</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Bridget
+  Margaret VAN HAEFTEN b.1931</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Maureen
+  Barbara VAN HAEFTEN b.1934</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Denzil
+  Arnold VAN HAEFTEN b.1936</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Ralph
+  George VAN HAEFTEN b.1938</td>
+  <td colspan=3 class=xl24 style='mso-ignore:colspan'></td>
+  <td class=xl25 width=145 style='border-top:none;width:109pt'>Joan Joyce
+  Josephine VAN HAEFTEN b.1936<br>
+  m. Clive Alston VAN HAEFTEN (see previous)</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Brigit
+  VAN HAEFTEN</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Randolf
+  VAN HAEFTEN</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>James
+  VAN HAEFTEN</td>
+  <td colspan=3 class=xl36 width=225 style='border-right:1.0pt solid black;
+  border-left:none;width:168pt'>Ederly Vivian Neville VAN HAEFTEN b.1938</td>
+  <td class=xl24></td>
+ </tr>
+ <tr height=69 style='mso-height-source:userset;height:51.95pt'>
+  <td height=69 colspan=38 class=xl24 style='height:51.95pt;mso-ignore:colspan'></td>
+  <td colspan=1 class= style='mso-ignore:colspan'></td>
+  <td colspan=2></td>
+  <td class=xl25 style='border-top:none;width:56pt'>Jason VAN HAEFTEN b. 1971 [r2]</td>
+  <td colspan=1 class= style='mso-ignore:colspan'></td>
+  <td class=xl25 width=75 style='border-top:none;width:56pt'>Sue VAN HAEFTEN b.
+  CIR 1956</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'
+  x:str="Mary VAN HAEFTEN b. CIR 1960 ">Mary VAN HAEFTEN b. CIR 1960 </td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Michael
+  SLADOVICH</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'
+  x:str="Sonya SLADOVICH ">Sonya SLADOVICH </td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Bryan
+  SLADOVICH</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'
+  x:str="Robert HOPE b. CIR 1956 ">Robert HOPE b. CIR 1956 </td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>David
+  HOPE b. CIR 1962</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'
+  x:str="Lynda HOPE b. CIR 1962 ">Lynda HOPE b. CIR 1962 </td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Michael
+  DAVIS b. CIR 1960</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'
+  x:str="Caroline VAN HAEFTEN b.1960 [m1] ">Caroline VAN HAEFTEN b.1960 [m1] </td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Ashley
+  VAN HAEFTEN b.1964 [m2]</td>
+  <td colspan=9 class= style='mso-ignore:colspan'>&nbsp;</td>
+  <td colspan=14 class=xl24 style='mso-ignore:colspan'></td>
+  <td class=xl25 width=75 style='border-top:none;width:56pt'>Glen Jude VAN
+  HAEFTEN</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Jonathan
+  Jude VAN HAEFTEN</td>
+  <td class=xl25 width=75 style='border-top:none;border-left:none;width:56pt'>Jacqueline
+  James VAN HAEFTEN</td>
+  <td class=xl24></td>
+ </tr>
+ <tr height=69 style='mso-height-source:userset;height:51.95pt'>
+  <td height=69 colspan=77 class=xl24 style='height:51.95pt;mso-ignore:colspan'></td>
+  <td class=xl25 width=75 style='border-top:none;width:56pt'>Jessica Jade VAN
+  HAEFTEN</td>
+  <td colspan=3 class=xl24 style='mso-ignore:colspan'></td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=145 style='width:109pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=145 style='width:109pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=145 style='width:109pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=145 style='width:109pt'></td>
+  <td width=145 style='width:109pt'></td>
+  <td width=145 style='width:109pt'></td>
+  <td width=145 style='width:109pt'></td>
+  <td width=145 style='width:109pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=145 style='width:109pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=145 style='width:109pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=145 style='width:109pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=145 style='width:109pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=145 style='width:109pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=145 style='width:109pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=145 style='width:109pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=75 style='width:56pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+
+<!-- END INSERT-->
+
+<p>
+<script language=JavaScript>rule("#CC99FF",7000);</script>
+<p>
+<table border=0 cellpadding=4 cellspacing=0>
+<tr><td class=3>Key</td>
+<tr>
+  <td class=xl41 width=75 >18th Century</td>
+  <td class=xl27 width=75 >19th Century</td>
+  <td class=xl25 width=75 >20th Century</td>
+<tr>
+  <td colspan=3 class=5><small>
+  Table created using MS Excel and <br>
+  then exporting to HTML.<br>
+  &copy; AVH 2002.
+  </td>
+</table>
+<p>
+<script language=JavaScript>rule("#CC99FF");</script>
+</body>
+
+</html>

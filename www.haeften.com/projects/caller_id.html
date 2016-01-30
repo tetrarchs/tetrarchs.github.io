@@ -1,0 +1,197 @@
+<html>
+<head>
+<title>Ashley Van Haeften :: CALLER ID</title>
+<!-- META TAG DEFINITIONS *** -->
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META  name="description" content="Ashley Van Haeften's Projects">
+<META  name="keywords"    content="Ashley Van Haeften Zoom 3025 3025C modem PCI internal Caller ID">
+<META  name="copyright"   content="2004, Ashley">  	   
+<META  name="rating"      content="general">
+<META  name="contact"     content="projects@haeften.com">
+<META  name="location"    content="United Kingdom, England, London, SE22">
+<link rel=stylesheet href="../haeften.css">
+<SCRIPT LANGUAGE="JavaScript" SRC="../haeften.js"></SCRIPT>
+
+</head>
+
+<body text=orange bgcolor=darkblue background="../_images/paper.jpg" lang=EN-GB link=green vlink=orange>
+<div class=Section1>
+<h1>Projects: Caller ID</h1>
+<h2>Zoom 2035C PCI Modem</h2>
+<h4><a href="http://www.haeften.com">home</a></h4>
+<p><script language=JavaScript>rule();</script>
+<center>
+<table border=0 cellspacing=0 cellpadding=0 width=600>
+ <tr>
+  <td valign=top style='padding:6.0pt 6.0pt 6.0pt 6.0pt' class=5>
+  <h2>Caller ID</h2>
+  <h3>What is it?</h3>
+  <p>In the UK, Caller ID is an optional service (BT charge &pound;3.50/qtr as of 2004) to enable
+  the caller's phone number to be displayed on the receiving phone before the call
+  is answered. My calls go via <a href="http://www.justdialsaver.com/" style="color:#CC99FF">Just Dial</a>
+  but as my line rental is still through BT I still get the standard Caller ID service.
+   Theoretically there is no reason why this Caller ID data cannot be made available to
+  your personal computer to log calls or act as an answering machine.</p>
+  <h3>Backgound</h3>
+  <p>There are few modems available in Britain that claim to handle Caller ID.  Manufacturers
+  are hesitant to explicitly state that their product will work in the UK but a model
+  that claims to have <b>Bell 202</b> (some cable companies use this) <b><i>and</i></b> <b>V.23</b> (BT standard)
+  should work.  Refer to <a href="http://www.ainslie.org.uk/callerid/cli_faq.htm#Q_6"
+  style="color:#CC99FF">www.ainslie.org.uk/callerid/</a> for a detailed breakdown.</p>
+  <p>As I have a neat office setup, I thought it would be great to be able to use the PC
+  to log incoming and outgoing business calls and Caller ID would be perfect. I have
+  Pipex broadband so my modem is not used for anything but the odd fax a couple of
+  times a year.</p>
+  
+  <p>Most telephony applications that log Caller ID and can act as an answering machine are
+  available for trial download and I spent a week playing around with a few on my 
+  non-Caller ID modem just to make sure their functionality seemed okay.</p>
+  
+  <p><a href="http://www.ainslie.org.uk/callerid/tel_soft.htm"
+  style="color:#CC99FF">www.ainslie.org.uk/callerid/</a> 
+  has an excellent list of software, in the end CallStation by <a href="http://www.imptec.com/"
+  style="color:#CC99FF">www.imptec.com</a> came out as my favorite. In particular it enables
+  you to have a different greeting for any user or groups of users you define, so I
+  can have a jokey answering machine message for friends, a polite one for business
+  callers and a neutral one for those with Caller ID withheld.</p>
+
+  <h3>Getting a Zoom 3025C to work in Windows 2000</h3>
+  
+  <h4>Step 1: Catch your pigeon</h4>
+  
+  <p>After a bit of on-line research the <a href="http://www.zoom.com">Zoom 3025C PCI 
+  internal modem</a> seemed to be a good bet as others had got it to work with 
+  Caller ID in the UK.  Zoom took over Hayes and the Hayes modems seemed to have 
+  a fair reputation.</p>
+  
+  <p>Rather than splashing out full price, particularly as I was not 100% sure it
+  would work, I took my time and bought a second hand
+  one on EBay for less than &pound;7.00 including postage. New these retail for 
+  just under &pound;40.00.  If you are looking at
+  the Zoom, make sure it is the right model as earlier models did not have full
+  Caller ID. Luckily the Zoom website has fairly detailed support documentation 
+  and updated drivers available.</p>
+  
+  <h4>Step 2: Prepare your pigeon</h4>
+  
+  <p>I installed the modem, used the latest downloaded drivers from the Zoom website
+  and tested basic functionality.  <i>It did not work.</i></p>
+  
+  <p>CallStation could not receive Caller ID no matter what I did.  I spent some time
+  surfing the net for solutions.</p>
+  
+  <p>The most revealing diagnostic tool was to use HyperTerminal (under Programs/Accessories/Communications)
+  to see if Caller ID was being returned - it was! This is the sort of response I was
+  getting:</p> 
+  <pre>OK
+RING
+
+DATE = 0405
+TIME = 1035
+NMBR = 02073470079
+</pre>
+  <p>More surfing and reading revealed
+  that the Windows 2000 TAPI (a bit of windows software that takes the modem data
+  and interprets it for applications) did not behave in a standard way. I emailed
+  Zoom support but they were a bit non-plussed (they were friendly however and were
+  interested in my eventual solution), they suggested I contact 
+  CallStation people as "The Zoom 3025-C modem is IS-101 Telephony protocol compliant".
+  It turns out that the IS-101 is the TAPI standard that Windows should comply with,
+  which Windows 2000 does not. So the conclusion was that the modem was okay, the
+  PC application was okay and Microsoft were the problem!</p>
+  
+  <h4>Step 3: Cook your pigeon</h4>
+  
+  <p>I was ready to quit but then I found a few websites that suggested that the
+  solution to this was to change the driver installation file. A bit more investigation
+  showed that in the windows registry under:</p>
+  <font size=1>
+  HKEY_LOCAL_MACHINE
+  <br>&nbsp;SOFTWARE
+  <br>&nbsp;&nbsp;Microsoft
+  <br>&nbsp;&nbsp;&nbsp;Windows
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;Current Version
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unimodem
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Device Specific
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zoom V.92 PCI Voice Faxmodem::Zoom Telephonics, Inc.::Zoom Telephonics, Inc.
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Responses
+  </font>
+
+  <p>Were the codes that the driver uses to respond to the windows TAPI. So rather than
+  hacking away at the installation file, a few commands could be added via regedit.</p>
+
+  <p>I suggest this is only attempted by someone who is happy using regedit, but here
+  are the extra <i>binary values</i> I added (right click in the regedit window, text strings must have spaces as shown):</p>
+
+  <pre>
+  "&lt;cr&gt;&lt;lf&gt;DATE = "           '93 00 00 00 00 00 00 00 00 00'
+  "&lt;cr&gt;&lt;lf&gt;NAME = "           '96 00 00 00 00 00 00 00 00 00'
+  "&lt;cr&gt;&lt;lf&gt;NMBR = "           '95 00 00 00 00 00 00 00 00 00'
+  "&lt;cr&gt;&lt;lf&gt;TIME = "           '94 00 00 00 00 00 00 00 00 00'
+  "&lt;cr&gt;&lt;lf&gt;TYPE = "           '97 00 00 00 00 00 00 00 00 00'
+  "&lt;DLE&gt;R"                    '08 00 00 00 00 00 00 00 00 00'
+  </pre>
+
+  <p>This was the hardest part to get right.  I had to use the 
+  <abbr title="Under the modem properties / diagnotics">modem log</abbr> to work
+  out that BT returned <code>"TYPE"</code> that seemed to be meaningless to the driver, so
+  I set to the same as MESG (after a suggestion by Zoom), and also when in voicemode 
+  the modem returned <code>"&lt;DLE&gt;R"</code> rather than <code>"RING"</code>.</p>
+
+  <p>The last part was to get the modem initialization string right in the modem properties. In the end
+  I left it as <code>"+VCID=1;+FCLASS=8;"</code> which switches on Caller ID
+  and puts the modem in voicemode.</p>
+  
+  <p>Trying to get full telephony working was a problem (the modem has no speaker phone
+  but uses the sound card). Eventually in device settings under the "Unimodem Full Duplex Audio Device" 
+  "Modem Wave Driver" I <i>unchecked</i> "Do not map through this device" and it seems
+  to be working okay so far.</p>
+  
+  <h4>Step 4: Eat your pigeon</h4>
+  
+  <p>CallStation uses WAV files in PCM 8000Hz mono to playback greetings to callers.
+  As well as recording my own, I ended up using GoldWave to edit MP3 voicemail 
+  greetings I found via P2P networking (Shareaza) into the right format.</p>
+  
+  <p>Interestingly the <code>NAME</code> field is not always left blank by BT.
+  The two examples I have are:</p>
+
+  <PRE>
+  <u>NAME</u>            <u>NUMBER</u>
+  INTERNATIONAL   O       (Out of area)
+  WITHHELD        P       (Private)</PRE>
+
+  <p>I've yet to see other uses on
+  my line (I believe that PAYPHONE, UNAVAILABLE and RINGBACK are also used) 
+  but CallStation uses these to set the Name field in its call log.</p>
+  <p><i>
+  If you are very interested BT has a document available on-line called 
+  <a href="http://www.sinet.bt.com/" style="color:#CC99FF">SIN 227</a>
+  which defines the "Calling Line Identification Service".
+  </i></p>
+
+  <h3>Conclusion</h3>
+    
+  <p>Phew! After about a day of ringing my own number and swapping settings back
+  and forth I have a fully working Caller ID telephony system.</p>
+  <p>The best extra feature has been being able to change the number of rings before
+  the PC answers the call.  So callers with Caller ID withheld, get answered in
+  two rings (so I can ignore all telemarketers), general calls in four, and calls from people I really should answer
+  in six (like my Mum). Most people dislike leaving a message, so at least with the
+  message being suitably amusing or specific to them they are more likely to leave
+  a message.  The PC also announces the name or number of the person calling using
+  its speech engine, so I don't even have to run to the phone to see who's calling
+  to decide if I should screen or not. The only extra feature I would like to see
+  is better integration with Outlook - I would love to see the call log automatically
+  laid out on my diary.</p>
+  <p>In conclusion, getting Caller ID to work on your system could be quite a big
+  project, so be prepared and do your homework!</p>
+  </td>
+ </tr>
+</table>
+</center>
+<p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+<script language=JavaScript>rule();</script>
+</div>
+</body>
+</html>

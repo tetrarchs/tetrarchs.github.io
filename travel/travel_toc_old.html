@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="http://www.shawnolson.net/scripts/public_smo_scripts.js"></script>
+<!-- Used for changecss() function -->
+<title>Travel TOC</title>
+<style>
+a {
+	text-decoration:none
+}
+a:hover {
+	color:#e05206
+}
+:-moz-any-link:focus {
+  outline: none;
+}
+
+br {
+	margin-bottom:0.75em;
+}
+h4 {
+	background-color:#ACE;
+	padding:0.2em;
+	padding-left:0.4em;
+	margin-left:-0.4em;
+	margin-right:-0.4em;
+	font-weight:bold;
+	-moz-border-radius:0.4em
+}
+button {
+	background-color:#ACE;
+	font-weight:bold;
+	-moz-border-radius:28px;
+}
+button:focus {
+	outline:none;
+	}
+
+</style>
+<script type="text/javascript">
+// list links (name:website) and titles (:title)
+function listLinks(Arr) {
+var i,r="";
+for (i=0;i<Arr.length;i++){
+	if(Arr[i].substr(0,1)==":"){
+		r+="<h4>"+Arr[i].substr(1)+"</h4>";
+	}else{
+		r+="<a href=http:\/\/"+Arr[i].split(":")[1]+" target=rightPage onblur=style.borderWidth='0';	onfocus=style.borderStyle='solid';style.borderWidth='0';style.borderTopWidth='2px';style.borderBottomWidth='2px'; >"+Arr[i].split(":")[0]+"</a><br />";
+		}
+	}
+document.write(r);
+}
+function styleToggle(tagName, styleString) {
+var theseStyles=document.getElementsByTagName(tagName),i;
+for(i=0;i<theseStyles.length;i++){
+	eval("theseStyles[i].style."+styleString.replace(/\/\//g,'"'));
+	}
+}
+// Background, Headers, Anchors, Visited Anchors, MouseOver
+function styleButton(bgcol,hcol,acol,avcol,mocol,name){
+return  "<button class=cb onclick=changecss(':link','color','"+acol+"');changecss(':visited','color','"+avcol+"');changecss('a:hover','color','"+mocol+"');changecss('.cb:hover','background-color','"+mocol+"');document.body.style.backgroundColor='"+bgcol+"';styleToggle('h4','backgroundColor=//"+hcol+"//');styleToggle('button','backgroundColor=//"+hcol+"//'); style='width:18px;-moz-border-radius:0px;padding:0px;margin:0px;border:solid 1px black' onmouseover=this.style.borderColor='orange'; onmouseout=this.style.borderColor='black'; onblur=this.style.borderColor='black'; title='"+name+"'><div style='background-color:"+bgcol+"'>&nbsp;&nbsp;</div></button>";
+}
+</script>
+</head>
+<body bgcolor="#c3e6fa" style="font-family:Arial, Helvetica, sans-serif" link="#102" vLink="#304">
+<noscript>
+<em>Sorry, you must have javascript enabled for this to display properly.</em>
+</noscript>
+<div id=main>
+  <div id=toggle style="display:none;">
+    <p align="center" style="margin-top:-4px;">
+      <button onclick="parent.document.body.cols='140,*';parent.document.body.rows='*';document.getElementById('toggle').style.display='none';" style="width:200px" onmouseover="this.style.color='#e05206'" onmouseout="this.style.color='black'" onblur="this.style.color='black'">Show
+      Sidebar</button>
+      <button onclick="parent.document.body.cols='*';parent.document.body.rows='0,*'" style="width:200px" onmouseover="this.style.color='#e05206'" onmouseout="this.style.color='black'" onblur="this.style.color='black'">Close
+      Sidebar</button>
+    </p>
+  </div>
+<script type="text/javascript">listLinks([
+  ":Live Reports",
+  "East Dulwich:www.livedepartureboards.co.uk/emt/sumdep.aspx?T=EDW&R=1&S=LBG",
+  "London Bridge:www.livedepartureboards.co.uk/emt/sumdep.aspx?T=LBG&R=1&S=EDW",
+  "Oxford:www.livedepartureboards.co.uk/emt/sumdep.aspx?T=PAD&R=1&S=OXF",
+  "Tube:www.tfl.gov.uk/tfl/livetravelnews/realtime/tube/default.html",
+  "Bus 176:www.tfl.gov.uk/tfl/livetravelnews/realtime/information.asp?line=176&Submit=Search&time=now&mode=buses",
+  ":Search",
+  "National Rail:www.nationalrail.co.uk",
+  "TFL Planner:journeyplanner.tfl.gov.uk",
+  "Evernote:www.evernote.com/pub/ashleyvh/HandyInformation",
+  ":News",
+  "BBC Travel:www.bbc.co.uk/london/travel",
+  "BBC Weather:news.bbc.co.uk/weather/forecast/2574?count=10&area=London%20Bridge",
+  "Met Office:www.metoffice.gov.uk/weather/uk/se/london_forecast_weather.html",
+  "Southwark News:www.southwarknews.co.uk/",
+  "World Clock:www.romanempire.talktalk.net/travel/world_clock.html",
+  ":Media",
+  "Radio 4:www.bbc.co.uk/iplayer/console/radio4",
+  "LBC 97.3:mediaweb.musicradio.com/player/default.asp?s=82&e=0",
+  "Classic fm:mediaweb.musicradio.com/player/default.asp?s=2",
+  "TV Guide:www.tvcatchup.com/guide.html"
+]);</script>
+  <p align="center" style="margin-bottom:0">
+    <button onclick="parent.document.body.cols='*';parent.document.body.rows='28,*';document.getElementById('toggle').style.display='inherit';" style="width:120px;" onmouseover="this.style.color='#e05206'" onmouseout="this.style.color='black'" onblur="this.style.color='black'">Hide</button>
+  </p>
+  <p align="center" style="margin-top:0;margin-bottom:0;">
+    <button class=ll onclick="parent.document.body.cols='*';parent.document.body.rows='0,*'" style="width:120px" onmouseover="this.style.color='#e05206'" onmouseout="this.style.color='black'" onblur="this.style.color='black'">Close</button>
+  </p>
+<p align="center" style="margin-top:1em"><script>
+// Background, Headers, Anchors, Visited Anchors, MouseOver
+document.write(styleButton("#203","#da2","#edf","#da2","#e05206","imperial"));
+document.write(styleButton("#c3e6fa","#ace","#102","#316","#e05206","blue"));
+document.write(styleButton("#010","#4a4","#cec","#ded","#4f4","green"));
+document.write(styleButton("#321","#cd853f","#fae","#fff8dc","cyan","fawn"));
+document.write(styleButton("white","#EEE","black","black","gray","white"));
+document.write(styleButton("black","#a84","#eaa","#ebb","red","black"));
+</script></p>
+</div>
+</body>
+</html>

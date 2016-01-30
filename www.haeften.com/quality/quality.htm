@@ -1,0 +1,135 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<title>Ashley Van Haeften's QUALITY </title>
+<meta name="Microsoft Theme 2.00" content="sumipntg 111">
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<meta http-equiv=author content="Ashley Van Haeften">
+<meta http-equiv=description content="Ashley's Business related pages">
+<meta http-equiv=keywords
+content="Quality Logica GEC Czech Brno SPT Julian Clary ashley van haeften Open University">
+<meta http-equiv=distribution content=global>
+<meta http-equiv=resource-type content=document>
+
+<SCRIPT LANGUAGE="JavaScript" SRC="../haeften.js"></SCRIPT>
+<link rel=stylesheet href="../haeften.css">
+<link rel=File-List href="./quality_files/filelist.xml">
+<link rel=Edit-Time-Data href="./quality_files/editdata.mso">
+
+<SCRIPT LANGUAGE="JavaScript">
+// configure shake degree (where larger # equals greater shake)
+var rector=1
+
+///////DONE EDITTING///////////
+var stopit=0 
+//var a=1
+
+function init(which){
+stopit=0
+shake=which
+shake.style.left=0
+shake.style.top=0
+golr=1
+goud=1
+myHPos=0
+myVPos=0
+}
+
+function rattleimage(){
+if ((!document.all&&!document.getElementById)||stopit==1)
+return
+myHPos=parseInt(shake.style.left)
+myVPos=parseInt(shake.style.top)
+if (myHPos>50) {golr=-1} 
+	else if (myHPos<-400) {golr=1}
+	else if (Math.random(1)>0.98) {golr*=-1}
+shake.style.left=myHPos+rector*golr*3
+if (myVPos>20) {goud=-1} 
+	else if (myVPos<-220) {goud=1}
+	else if (Math.random(1)>0.98) {goud*=-1}
+shake.style.top=myVPos+rector*goud*2
+
+setTimeout("rattleimage()",1000/20)
+}
+
+function stoprattle(which){
+stopit=1
+which.style.left=0
+which.style.top=0
+}
+</script>
+
+<style><!--
+li {
+   list-style-image:url(../_images/list.gif);
+   margin-bottom:3pt;
+   }
+a:hover {list-style-image:url(../_images/listover.gif);}
+
+.shakeimage {
+		position:relative;
+		z-index:1;
+		}
+
+-->
+</style>
+
+</head>
+
+<body text=orange bgcolor=darkblue background="../_images/paper.jpg" lang=EN-GB
+style='tab-interval:36.0pt' >
+
+<div class=Section1>
+
+<h1>Quality</h1><p>
+
+<script language=JavaScript>rule();</script>
+
+<p class=MsoNormal align=center style='text-align:center'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<div align=center>
+
+<table border=0 cellspacing=0 cellpadding=0 width=400 style='mso-cellspacing:0cm;margin-left:-.05pt;mso-padding-alt:6.0pt 6.0pt 6.0pt 6.0pt'>
+ <tr>
+  <td valign=top style='padding:6.0pt 6.0pt 6.0pt 6.0pt' class=4>
+  <h2>Standards</h2>
+  <ul type=square style="color:orange">
+  <li><a href="http://www.rtca.org/">RTCA Avionics</a></li>
+  <li><a href="http://www.exin.nl/">ITIL IT Management</a></li>
+  <li><a href="http://www.bsi-global.com/">BSI British Standards</a></li>
+  </ul>
+  </td>
+  <td rowspan=2 valign=bottom>
+  <img id="bean" width=60 height=161 src="../_images/zbean.gif" align=right hspace=12 
+  alt="Err, ISO9001, paragraph 4.4, probably." 
+  class="shakeimage" onMouseout="init(this);rattleimage()" onMouseover="stoprattle(this)" onLoad="init(this);rattleimage()">
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:6.0pt 6.0pt 6.0pt 6.0pt' class=4>
+  <h2>Professional Bodies</h2>
+  <ul type=square style="color:orange">
+  <li><a href="http://www.bcs.org.uk/">BCS British Computer Society</a></li>
+  <li><a href="http://www.bcs.org.uk/siggroup/sg48.htm">BCS Quality SIG</a></li>
+  <li><a href="http://www.itsmf.com/">ITSMF</a></li>
+  <li><a href="http://www.cssa.co.uk/">CSSA</a></li>
+  </ul>
+  </td>
+ </tr>
+</table>
+
+</div>
+<script language=JavaScript>
+rule()
+</script>
+
+</div>
+</body>
+</html>

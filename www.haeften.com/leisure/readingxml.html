@@ -1,0 +1,198 @@
+<html><head>
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<title>Reading List</title><link rel=Stylesheet type="text/css" media=all href=reading.css>
+
+<script>	
+	// load xml doc from the URL then processes it
+	// will work with any xml document
+function loadXML(url, handler) {
+// standard DOM level 2 techique
+if (document.implementation && document.implementation.createDocument){
+	var xmldoc=document.implementation.createDocument("", "", null);
+	xmldoc.onload=function() { handler(xmldoc, url); }
+	xmldoc.load(url);
+	}
+// otherwise use Microsoft's proprietory API for Internet Explorer
+else if (window.ActiveXObject) {
+	var xmldoc = new ActiveXObject("Microsoft.XMLDOM");
+	xmldoc.onreadystatechange=function() {
+		if (xmldoc.readyState==4) handler(xmldoc, url);
+		}
+	xmldoc.load(url);
+	}
+}
+
+function makeArray(xmldoc, url) {
+/*	var table = document.createElement("table");
+	var caption="Data from " + url + " ["+ xmldoc.getElementsByTagName("Laws").length +" records]";
+	table.createCaption().appendChild(document.createTextNode(caption));
+	table.caption.style.fontSize="12pt";
+	var header = table.createTHead();
+	var headerrow=header.insertRow(0);*/
+	
+	//	UPDATE THIS ARRAY WITH XML FIELD NAMES
+	var fields=	new Array("Title,Author,Rating,Cover,Comments,ISBN,Year".split(","));	//.reverse()?
+
+	//	FILL IN THE DATA
+	var books = xmldoc.getElementsByTagName("Books");
+	var a = new Array(books.length);
+	for (var i=0;i<books.length;i++) {a[i] = new Array(fields.length)};	
+	for (var i=0;i<books.length;i++) {
+		var b=books[i];
+		for (var j=0; j<fields.length; j++){
+			if (b.getElementsByTagName(fields[j]).length > 0) { 
+				a[i][j]=b.getElementsByTagName(fields[j])[0].firstChild.data } else {
+				a[i][j]=" ";
+				};	// end if
+			};	// end for j
+		};	// end for i
+	filldata(a);
+	};	// end function
+
+/*		 	  	  		   		  	   	 	 				  	   		 	  */
+/* NO CHANGES NEEDED FROM HERE ON !		 						  	  	 	  */
+/* 																		 	  */ 
+
+
+/* FILLDATA FUNCTION 				  		  					  		  	  */
+function filldata(a) 
+{ 
+      /* Initialize variables */ 
+	  //      var strHTML = " " 
+      var myVar = "<table border=1 cellpadding=0 "+
+	  	  "style='margin-left:.4in; color:yellow; border:solid #8D346E 1.0pt;' "+
+		  "bordercolordark='orange' bordercolorlight='yellow'>"
+  	  /* Create the Table */
+      for (var k=0; k < maxrows; k++) { 
+         var str = "<tr>" 
+		 var i=0
+	 	 if (k>0) {i=maxrows-k} // print newest first
+         for (var j=0; j < maxcols; j++) {
+		 	 if (!a[i][j]) {a[i][j]="&nbsp;"} 
+		 	 if (i==0) { 
+			   str += "<td valign=top bgcolor='#993366' " +
+			     "style='border:solid orange 1.0pt; background:0; padding:.75pt .75pt .75pt .75pt'>" +
+				 "<b><i><font size=3 face=Arial><span onclick=sort(" + j + ") " + 
+				 "style='font-size:12.0pt;font-family:Arial;color:orange;font-weight:bold; font-style:italic'>" +
+				 a[i][j] + "</span></font></i></b></td>"
+			   }
+			 else if (j==3) { // Cover Image - must reside in reading/images.
+				  str += "<td valign=top style='border:solid orange 1.0pt;padding:.75pt .75pt .75pt .75pt; font-size:12.0pt;font-family:Arial'><a href=\"http:\/\/www.amazon.co.uk/exec/obidos/asin/" + 
+				  a[i][5] + "/haeften-21/\" target=\"_top\" title=\"'" + a[i][0] + "' Click&nbsp;to&nbsp;see&nbsp;this&nbsp;book&nbsp;on&nbsp;Amazon\"><span style='text-decoration:none;'>"
+				  if (a[i][j]==true) { 
+				  	 str+="<img border=0 src=\"covers/" + a[i][5] + ".gif\">" // width=90 height=139
+					 }
+				  else { str+= 'Check Online' }
+				  str+="</span></a></span></font>"
+				  }
+			 else if (j==5) { // ISBN
+			 	  str += "<td align=center valign=top style='border:solid orange 1.0pt;padding:.75pt .75pt .75pt .75pt; font-size:7.5pt;font-family:Arial;'>" +
+				  String(a[i][j]).substring(0,5) + "<br>" + String(a[i][j]).substring(5,String(a[i][j]).length)
+				  "</td>"
+			 	  }
+			 else if (j==2) { // Rating
+  			 	  str += "<td valign=top align=center "+
+				  "style='border:solid orange 1.0pt;padding:.75pt .75pt .75pt .75pt; font-size:18.0pt;font-family:Arial"
+				  if (a[i][j].length > 3) {str += ";color:red"}; 				  				    
+				  str += "'>" + a[i][j] + "</td>"
+			 	  }
+			 else { 
+			 	  str += "<td valign=top  style='border:solid orange 1.0pt;padding:.75pt .75pt .75pt .75pt; font-size:12.0pt;font-family:Arial'>" + a[i][j] + "</td>"
+			 } // end if 
+			 
+         } // j loop
+         myVar += str + "</tr>" 
+      } // i loop
+  
+      document.all.vals.innerHTML = myVar + "</table>"; 
+}
+
+/* SORT FUNCTION 				  		  					  		  		  */
+/* should only have the one argument, the column number 					  */
+
+function dosort() // sort array
+{
+  var p = new Array(maxrows) // parking array
+  var c = arguments[0]
+  for (var i=1;  i < maxrows-1; i++) {
+	for (var j=i+1; j < maxrows; j++) {
+	if (((c==6||c==2) && (a[i][c] > a[j][c]))||
+	((c!=6&&c!=2)&&(a[i][c] < a[j][c]))) { // col 6 is year;
+	  p=a[i];
+	  a[i]=a[j];
+	  a[j]=p;
+	  } 
+	}
+  }
+}
+
+function sort() // does sort and repaints table
+{
+  dosort(arguments[0]);
+  filldata();
+}
+
+function firstfill() // sort by year for first table layout
+{
+  sort(6);
+}
+
+ 
+//-->
+</SCRIPT> 
+
+<NOSCRIPT>
+<tt>
+<B><u>Warning: Your browser does not currently support JavaScript.</u></B>
+<br>This page is unlikely to behave correctly without it enabled.
+<br>If your are using Netscape 2 or later then you can enable JavaScript. 
+<br><b>Version 2 or 3:</b> Choose Options | Network Preferences, choose the Languages tab, click Enable Javascript and then click OK.
+<br><b>Version 4:</b> Choose Edit | Preferences | Advanced, click Enable JavaScript and then click OK.
+<br><b>With Internet Explorer 5:</b>  Go to Tools Menu | Internet Options, Security Tab  and click on the Custom Level. Then select disable active scripting under the scripting section.
+</tt><hr>
+</NOSCRIPT>
+
+<script language="JavaScript" src="../haeften.js" type="text/javascript">
+</script>
+<link rel="stylesheet" href="../haeften.css" />
+	
+</head>	
+<!-- THE MAIN WEB PAGE BODY				  				   			 	   	-->
+
+<body text="orange" bgcolor="darkblue" background="../_images/paper.jpg" 
+lang="EN-GB" onload="loadXML('books.xml', makeArray); firstfill()">
+<!-- If you wanted to load the xml data via a link to this page:
+loadXML(location.search.substring(1)	-->
+</head>
+
+<body onload="">
+
+<div class=Section1>
+
+<h1>
+Reading List
+</h1>
+<script language="JavaScript" type="text/javascript">
+rule();
+</script>
+<h4>
+These are the books I have re-read time and time again.
+</h4>
+<h5>
+Click on the cover to find the book on Amazon.<br>
+Click on a column heading to sort.</span></font></h3>
+</h5>
+
+<!DIV ID=vals><!/DIV><! Table gets inserted here>
+<form name=vals>yes</form>
+
+<p></p>
+
+<script language="JavaScript" type="text/javascript">
+mailto('ashley','haeften.com','E-mail me',' your comments and suggestions.<p></p>');
+rule();
+</script>
+
+</div>
+</body>
+</html>

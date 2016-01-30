@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/transitional.dtd">
+<html xmlns="http://www.w3.org/TR/xhtml1">
+  <head>
+    <title>
+      Ashley Van Haeften's ~ FAQ ~ Make your own Outlook Form
+    </title>
+    <!-- META TAG DEFINITIONS *** -->
+    <meta content="text/html; charset=iso-8859-1" />
+    <meta name="description" content="Ashley Van Haeftens Leisure Links" />
+    <meta name="keywords" content="Ashley Van Haeften ize ise" />
+    <meta name="copyright" content="1995-2005, Ashley" />
+    <meta name="rating" content="general" />
+    <meta name="contact" content="junk@haeften.com" />
+    <meta name="location" content="United Kingdom, England, London, SE15" />
+<!-- Pull in personal library scripts & styles -->
+<script language="JavaScript" src="../../haeften.js" type="text/javascript">
+    </script>
+    <link rel="stylesheet" href="../../haeften.css" />
+<style>
+<!--
+li {
+   list-style-image:url('../../_images/list.gif');
+   margin-bottom:2pt
+   }
+.q {color:black;}
+a:hover {list-style-image:url('../../_images/listover.gif');}
+-->
+</style>
+<body text="orange" bgcolor="darkblue" background="../../_images/paper.jpg" lang="EN-GB">
+<H1>FAQ: Creating an Outlook Form with Buttons</h1>
+
+
+<center>
+<table cellpadding="12" width=600>
+<tr><td>
+<h5>1. Open Forms Editor</h5><p>
+The first step is to find the Outlook forms edit in the toolbar.  Select the standard mail template and use this to create another form (once happy with your new form you can use Formsadmin.exe from microsoft to replace the standard mail form, Google for some guidance as you may need to search an replace the Outlook version number in the resulting registry file).
+<h5>2. Create Buttons</h5>
+<p>
+You can move around all the normal part of the mail form and you can use the controls toolbox to introduce drop lists and buttons.  
+<p>
+I used buttons to introduce quick controls for standard email types used in my company.  In particular the convention is to prefix the subject line with INFO, REQ (request), Action etc. so the recipient can quickly see what to deal with first.  The suffix [eom] is also used for "pager" emails where the subject line is all that is needed (e.g. "Drinks tonight on at 8pm not 7.30 [eom]".
+<h5>3. Create Script</h5>
+<p>
+Once the buttons are set up neatly on your form, the tricky part is the associated code.  Use the "view code" button to open an edit panel for scripts to be used with the form.  Below are my example scripts for buttons I named InfoButton, ReqButton, UrgentButton, PerButton and EomButton.  As you create the scripts you can run the form to check there are no bugs introduced.  Use the object browser as part of the visual basic editor (alt F11 in Outlook) to find the properties available for the mail item object.
+<pre><font color=lightyellow><u>Example Code</u>
+
+Sub InfoButton_Click()
+	item.subject="INFO " + item.subject
+	item.categories="Information"
+end sub
+Sub ReqButton_Click()
+	item.subject="REQ " + item.subject
+	item.categories="Request"
+end sub
+Sub UrgentButton_Click()
+	item.subject="Urgent " + item.subject
+	item.categories="Urgent"
+	item.importance=2	<font color=green>'0=low 2=high</font>
+end sub
+Sub PerButton_Click()
+	item.categories="Personal"
+	item.sensitivity=2	<font color=green>'1=personal</font>
+end sub
+Sub EomButton_Click()
+	item.subject=item.subject+" [eom]"
+	item.categories="Brief Note"
+	item.body=item.body+"Key: [eom] means 'end of message'"
+end sub
+</pre></font>
+<h5>4. Use the form</h5>
+<p>
+Save the form under the personal forms library.  You can either choose the form when you want it from the menu or use the Formsadmin tool from Microsoft to replace the standard form with yours.
+<h5>References</h5>
+<a href="http://www.microsoft.com/office/orkarchive/2000ddl.htm">Microsoft Outlook Formsadmin</a>
+</table>
+<p>
+</center>
+<h4><a href="faq.htm">Return</a></h4>
+<script language="JavaScript" type="text/javascript">
+rule();
+</script>
+
+</div>
+</body>
+</html>

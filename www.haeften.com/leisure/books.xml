@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata">
+<Books>
+<ID>1</ID>
+<Title>Teranesia</Title>
+<Author>Greg Egan</Author>
+<Rating>4</Rating>
+<ISBN>0575068558</ISBN>
+</Books>
+<Books>
+<ID>2</ID>
+<Comments><![CDATA[Most famous for his Ringworld series, here's a great novel encompassing great ideas of being a corpsicle, starship rammer and 3 million years of future evolution. Lookout for his new book <a href=\"http:\/\/www.amazon.co.uk/exec/obidos/asin/1841491705/haeften-21/\" target=\"_top\" title=\"Click to see details and price on Amazon\">Ringworld's Child<\/a> due out in June 2004.]]></Comments>
+<ISBN>0345336968</ISBN>
+<Year>1999</Year>
+</Books>
+</dataroot>

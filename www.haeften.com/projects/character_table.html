@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Character Table</title>
+<SCRIPT LANGUAGE="JavaScript" SRC="../haeften.js"></SCRIPT>
+<!link rel=stylesheet href="../haeften.css">
+</head>
+<script javascript>
+<!--
+function paintchar(start,finish) {
+for (i=0; i<8; i++) {
+  document.write("<col align=center><col bgcolor=white color=black align=center>");
+  }
+document.write("<tr>");
+for (i=start; i<finish; i++) {
+  document.write("<td class=5>",i,"</td><td style='font-face:System;font-size:14pt;color:black'>&#",i,";</td>");
+  j=(i+1)/8;
+  if ((Math.floor(j) == j)&&(i<finish-1)) {
+    document.write("<tr>");
+    }
+  }
+}
+function drawrule(colour) {
+document.write("</table>");
+rule(colour); // inherited from haeften.js
+}
+-->
+</script>
+<body bgcolor=darkblue text=orange background="../_images/paper.jpg">
+<h2 align=center>ASCII Character Table</h2>
+<p></p>
+
+<table border=0 width=500 align=center>
+<tr><td colspan=16><font color=orange>
+To include one of these characters in your html document write "&amp;#"+number+";"<br>
+E.g. &#128; = "&amp;#128;"</font>
+</td></tr>
+<script language=JavaScript><!--
+drawrule();document.write("<table border=0 width=500 align=center>");
+paintchar(32,128);drawrule("darkgreen");
+-->
+</script>
+
+<script language=JavaScript><!--
+for (var n=128;n<4096;n+=128){
+  document.write("<table border=0 width=500 align=center>\n");
+  paintchar(n,n+128);
+  if(((n+128)%512)==0){
+    drawrule();
+  	} else {
+  	drawrule("darkgreen");
+  	}
+  }
+-->
+</script>
+
+<a href=project.htm class=5>Back</a>
+</body>
+</html>
